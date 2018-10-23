@@ -1,0 +1,7 @@
+//I just spam this to make sure it runs as fast as possible.  I guess I could check journal but it had a horse: You can not...  anyway.  Alt click to follow the mob, you will have to target it first with your normal taming hotkey
+while weight < 700
+  useskill 'animal taming'
+  waitfortarget 100
+  target lasttarget
+  pause 500
+endwhile

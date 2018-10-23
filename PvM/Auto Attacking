@@ -1,0 +1,16 @@
+//There are better ways to do while, but this works.  Alt click the character you will be controling to make them follow
+while weight < 800
+  //check hp
+  if hits < 69
+    bandageself
+    pause 17000
+  endif
+  //find and attack
+  getenemy 'murderer' 'Enemy' 'criminal' 'gray'
+  if @findobject 'enemy'
+    autotargetobject! 'enemy'
+    attack! 'enemy'
+  endif
+  @clearusequeue
+  @cancelautotarget
+endwhile

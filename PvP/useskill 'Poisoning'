@@ -1,0 +1,7 @@
+useskill 'Poisoning'
+waitfortarget 15000
+targettype 0xf0a
+waitfortarget 15000
+if @findlayer 'self' 1
+  target 'found'
+endif

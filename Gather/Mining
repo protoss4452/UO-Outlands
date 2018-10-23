@@ -1,0 +1,25 @@
+//mining script
+while weight < 300
+  if injournal 'You do not see any harvestable' 'system'
+    walk southwest
+    walk southwest
+    clearjournal
+  endif
+  findtype 0xe86 'any' 'backpack'
+  useobject found
+  useobject found
+  waitfortarget 15000
+  target! 'self'
+endwhile
+//weight check to forge
+if weight >= 300
+  if counttype 0x19b9 'any' 'backpack' > 5
+    usetype 0x19b9
+    usetype 0x19b9
+    usetype 0x19b9
+  endif
+  while injournal 'You do not see any nearby forges' 'system'
+    walk northeast
+    clearjournal
+  endwhile
+endif

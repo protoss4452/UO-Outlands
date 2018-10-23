@@ -1,0 +1,3 @@
+clearhands 'both'
+@findtype 0xf5e 'any' 'backpack'
+equipitem found 1
