@@ -1,0 +1,6 @@
+//cast magic lock and make a summoning stone
+cast "Magic Lock"
+waitfortarget 3000
+targettype 0x1ecd 2853 2
+waitforgump 0xe7e28642 15000
+replygump 0xe7e28642 2
