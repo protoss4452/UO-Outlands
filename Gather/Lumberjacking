@@ -1,6 +1,10 @@
-//lumber main, so this example walks mainly west (15 times) then north one time.  It will skip walking west when it finds resources
+//lumber main
 for 5
   for 15
+    if clearhands 'right'
+      findtype 0xf44 'any' 'backpack'
+      useobject found
+    endif
     if injournal 'You do not see any harvestable' 'system'
       for 4
         walk west
@@ -8,8 +12,7 @@ for 5
       clearjournal
     else
       findtype 0xf44 'any' 'backpack'
-      useobject found
-      useobject found
+      useobject 'LeftHand'
       waitfortarget 15000
       target! 'self'
       pause 6500
@@ -22,6 +25,10 @@ endfor
 //2nd loops to return back to start, somewhat
 for 5
   for 15
+    if clearhands 'right'
+      findtype 0xf44 'any' 'backpack'
+      useobject found
+    endif
     if injournal 'You do not see any harvestable' 'system'
       for 4
         walk east
@@ -29,8 +36,7 @@ for 5
       clearjournal
     else
       findtype 0xf44 'any' 'backpack'
-      useobject found
-      useobject found
+      useobject 'LeftHand'
       waitfortarget 15000
       target! 'self'
       pause 6500
