@@ -1,14 +1,18 @@
 //mining script
 while weight < 300
+  if clearhands 'left'
+    findtype 0xe86 'any' 'backpack' 1 3
+    useobject 'found'
+    useobject 'found'
+  endif
   if injournal 'You do not see any harvestable' 'system'
-    walk southwest
-    walk southwest
+    for 3
+      walk southwest
+    endfor
     clearjournal
   endif
-  findtype 0xe86 'any' 'backpack'
-  useobject found
-  useobject found
-  waitfortarget 15000
+  useobject 'RightHand'
+  waitfortarget 5000
   target! 'self'
 endwhile
 //weight check to forge
