@@ -7,6 +7,15 @@ while weight < 800
   endif
   //find and attack
   getenemy 'murderer' 'Enemy' 'criminal' 'gray'
+  //just change the weight to 1 if you want this disabled
+  while weight < 800
+    useskill 'peacemaking'
+    target 'enemy'
+  endwhile
+  while weight < 800
+    useskill 'discordance'
+    target 'enemy'
+  endwhile
   if @findobject 'enemy'
     autotargetobject! 'enemy'
     attack! 'enemy'
