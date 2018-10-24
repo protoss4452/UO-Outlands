@@ -15,7 +15,7 @@ for 5
       useobject 'LeftHand'
       waitfortarget 15000
       target! 'self'
-      pause 6500
+      pause 5000
     endif
   endfor
   for 2
@@ -39,7 +39,7 @@ for 5
       useobject 'LeftHand'
       waitfortarget 15000
       target! 'self'
-      pause 6500
+      pause 5000
     endif
   endfor
   for 2
