@@ -1,0 +1,19 @@
+//should skin and open the corpse
+if @findtype 0x2006 'any' 'ground' 'any' 3
+  setalias 'corpse' 'found'
+  usetype 0x2d20 'any' 'backpack'
+  waitfortarget 1200
+  target 'corpse'
+  ignoreobject 'corpse'
+  useobject 'corpse'
+endif
+if @findtype 0x1079 'any' 'ground' 'any' 3
+  usetype 0x2d20 'any' 'backpack'
+  waitfortarget 1200
+  target 'found'
+endif
+if @findtype 0x1079 'any' 'backpack' 'any'
+  usetype 0x2d20 'any' 'backpack'
+  waitfortarget 1200
+  target 'found'
+endif
