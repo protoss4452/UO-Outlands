@@ -1,11 +1,18 @@
-//casts magic lock, activates crystal, moves to a bag
-cast "Magic Lock"
-waitfortarget 3000
-targettype 0x1ecd 2853 2
-waitforgump 0xe7e28642 15000
-replygump 0xe7e28642 2
-pause 2000
-usetype 0x1ecd 2903 'backpack' 0
-pause 1000
-//uses a unique bag id
-movetype 0x1ecd 'backpack' 0x40091c3d 1 1 1 2903 1 0
+//casts magic lock, activates crystal, moves to a bag... searches for a puch then backpack
+if @findtype '0x1ecd' '2853' 'backpack' 'any'
+  cast "Magic Lock"
+  waitingfortarget 4000
+  target 'found'
+  waitforgump 0xe7e28642 15000
+  replygump 0xe7e28642 2
+  pause 500
+  if findtype 0x1ecd 2903 'backpack' 1 0
+    setalias 'lockedstone' 'found'
+    useobject 'lockedstone'
+    if findtype 0xe76 'any' 'backpack' 1 0
+      moveitem 'lockedstone' 'found'
+    elseif findtype 0xe75 'any' 'backpack' 1 0
+      moveitem 'lockedstone' 'found'
+    endif
+  endif
+endif
