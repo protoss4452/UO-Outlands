@@ -1,4 +1,4 @@
-//should skin and open the corpse
+//not mine... just added in the correct ojbect graphics.  should skin and open the corpse
 if @findtype 0x2006 'any' 'ground' 'any' 3
   setalias 'corpse' 'found'
   usetype 0x2d20 'any' 'backpack'

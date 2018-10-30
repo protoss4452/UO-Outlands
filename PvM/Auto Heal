@@ -1,0 +1,12 @@
+//keeps checking if your hp goes below 100, best to set the 100 at your max hits or str.  so the second you get damage it starts healing.  you could even turn down the pause timer at the bottom.  Also my bandage timer was 10500 when there is no lag
+
+while weight < 900
+  if hits < 100 or poisoned 'self'
+    headmsg 'healing.....'
+    usetype 0xe21
+    target 'self'
+    pause 11500
+  else
+    pause 1000
+  endif
+endwhile
