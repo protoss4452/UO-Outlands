@@ -3,3 +3,6 @@ name and x location on objects
 setimer for timer
 playsound 25 //have to be in the uo window
 turn command
+
+if hits == hits 'self'
+to check if you have been hurt

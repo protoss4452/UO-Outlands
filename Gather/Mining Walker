@@ -1,0 +1,14 @@
+//so this script mines until it finds no more ore then walks in a certain direction.  i just change the direction by hand or make multiple script.  you will want to set hotkeys to start and end macro for captcha
+while weight < 498
+  useobject 'RightHand'
+  pause 1000
+  target 'self'
+  pause 1000
+  if injournal 'You do not see' 'system'
+    clearjournal
+    for 5
+      walk NORTHEAST
+    endfor
+  endif
+endwhile
+pause 10000

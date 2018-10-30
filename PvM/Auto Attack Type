@@ -1,0 +1,10 @@
+// auto attack headless ones, use object inspector or "and" to add in more creature types.  does nto move to target but should aggro
+
+@findtype 0x1f
+attack 'found'
+useskill 'hiding'
+if hits < hits 'self'
+  usetype 0xe21 'any' 'backpack' 3
+  target 'self'
+  pause 14000
+endif
