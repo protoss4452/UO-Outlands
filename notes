@@ -4,5 +4,5 @@ setimer for timer
 playsound 25 //have to be in the uo window
 turn command
 
-if hits == hits 'self'
+if hits != maxhits
 to check if you have been hurt

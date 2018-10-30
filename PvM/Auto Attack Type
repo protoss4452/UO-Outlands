@@ -3,7 +3,7 @@
 @findtype 0x1f
 attack 'found'
 useskill 'hiding'
-if hits < hits 'self'
+if hits != maxhits
   usetype 0xe21 'any' 'backpack' 3
   target 'self'
   pause 14000
