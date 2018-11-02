@@ -2,47 +2,49 @@
 for 5
   for 15
     if clearhands 'right'
-      findtype 0xf44 'any' 'backpack'
+      @findtype 0xf44 'any' 'backpack'
       useobject found
     endif
-    if injournal 'You do not see any harvestable' 'system'
+    if @injournal 'You do not see any harvestable' 'system'
       for 4
         walk west
       endfor
       clearjournal
     else
-      findtype 0xf44 'any' 'backpack'
+      @findtype 0xf44 'any' 'backpack'
       useobject 'LeftHand'
       waitfortarget 15000
       target! 'self'
       pause 5000
     endif
   endfor
-  for 2
+  for 4
     walk north
+    walk east
   endfor
 endfor
 //2nd loops to return back to start, somewhat
 for 5
   for 15
     if clearhands 'right'
-      findtype 0xf44 'any' 'backpack'
+      @findtype 0xf44 'any' 'backpack'
       useobject found
     endif
-    if injournal 'You do not see any harvestable' 'system'
+    if @injournal 'You do not see any harvestable' 'system'
       for 4
         walk east
       endfor
       clearjournal
     else
-      findtype 0xf44 'any' 'backpack'
+      @findtype 0xf44 'any' 'backpack'
       useobject 'LeftHand'
       waitfortarget 15000
       target! 'self'
       pause 5000
     endif
   endfor
-  for 2
+  for 4
     walk south
+    walk west
   endfor
 endfor
