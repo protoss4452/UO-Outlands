@@ -1,0 +1,10 @@
+//creates a timer and every 15 seconds will run bandages
+if not timerexists 'sample'
+  createtimer 'sample'
+endif
+//OTHER ACTION
+if timer 'sample' > 15000
+  settimer 'sample' 0
+  usetype 0xe21
+  target 0xe06f
+endif
